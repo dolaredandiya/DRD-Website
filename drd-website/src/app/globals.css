@@ -5,6 +5,14 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-prussian-500: oklch(0.2767 0.0388 245.25);
+  --color-harvest-500: oklch(0.717 0.1296 75.63);
+  --color-superiority-500: oklch(0.6932 0.0622 230.43);
+  --color-champagne-500: oklch(0.9276 0.0357 79.68);
+  --color-moss-500: oklch(0.6118 0.0927 126.67);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
