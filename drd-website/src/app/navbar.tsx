@@ -14,19 +14,19 @@ export default function Navbar() {
                     </h1>
                 </li>
                 <li className="flex items-center">
-                    <a href="/" className="text-white hover:text-blue-200 font-semibold">Home</a>
+                    <Link href="/" className="text-white hover:text-blue-200 font-semibold">Home</Link>
                 </li>
                 <li className="flex items-center">
-                    <a href="/about" className="text-white hover:text-blue-200 font-semibold">About</a>
+                    <Link href="/about" className="text-white hover:text-blue-200 font-semibold">About</Link>
                 </li>
                 <li className="flex items-center">
-                    <a href="/currSponsors" className="text-white hover:text-blue-200 font-semibold">Current Sponsors</a>
+                    <Link href="/currSponsors" className="text-white hover:text-blue-200 font-semibold">Current Sponsors</Link>
                 </li>
                 <li className="flex items-center">
-                    <a href="/potenSponsors" className="text-white hover:text-blue-200 font-semibold">Potential Sponsors</a>
+                    <Link href="/potenSponsors" className="text-white hover:text-blue-200 font-semibold">Potential Sponsors</Link>
                 </li>
                 <li className="flex items-center">
-                    <a href="/contact" className="text-white hover:text-blue-200 font-semibold">Contact</a>
+                    <Link href="/contact" className="text-white hover:text-blue-200 font-semibold">Contact</Link>
                 </li>
             </ul>
         </nav>
