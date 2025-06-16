@@ -1,7 +1,5 @@
-import Navbar from "./navbar"; 
+import ComingSoon from "./comingSoon";
 
 export default function Home() {
-  return (
-    <Navbar></Navbar>
-  );
+  return <ComingSoon></ComingSoon>
 }
