@@ -23,43 +23,43 @@ export default function Home() {
     };
     const boardTeam: Record<string, BoardMember[]> = {
         "Directors": [
-            { name: "Smruti Ganta", email: "smruti@example.com", image: "apple.jpg" },
-            { name: "Sanjitha Srinath", email: "sanjitha@example.com", image: "banana.jpg" },
-            { name: "Raj Yogarajan", email: "raj@example.com", image: "cherry.jpg" }
+            { name: "Smruti Ganta", email: "sganta@unc.edu", image: "" },
+            { name: "Sanjitha Srinath", email: "sanjita@unc.edu", image: "" },
+            { name: "Raj Yogarajan", email: "ryogaraj@unc.edu", image: "" }
         ],
         "Marketing": [
-            { name: "Diya Parikh", email: "diya@example.com", image: "date.jpg" },
-            { name: "Khushil Shah", email: "khushil@example.com", image: "elderberry.jpg" },
-            { name: "Aadhi Jayaram", email: "aadhi@example.com", image: "fig.jpg" },
-            { name: "Khyati Srivastava", email: "khyati@example.com", image: "grape.jpg" }
+            { name: "Diya Parikh", email: "", image: "" },
+            { name: "Khushil Shah", email: "", image: "" },
+            { name: "Aadhi Jayaram", email: "", image: "" },
+            { name: "Khyati Srivastava", email: "", image: "" }
         ],
         "Finance": [
-            { name: "Keya Mahajan", email: "keya@example.com", image: "honeydew.jpg" },
-            { name: "Sithija Ganhewage", email: "sithija@example.com", image: "kiwi.jpg" }
+            { name: "Keya Mahajan", email: "", image: "" },
+            { name: "Sithija Ganhewage", email: "", image: "" }
         ],
         "Sponsorship": [
-            { name: "Moksha Nemalipuri", email: "moksha@example.com", image: "lemon.jpg" },
-            { name: "Aarav Gupta", email: "aarav@example.com", image: "mango.jpg" },
-            { name: "Dhiren Akkina", email: "dhiren@example.com", image: "nectarine.jpg" }
+            { name: "Moksha Nemalipuri", email: "", image: "" },
+            { name: "Aarav Gupta", email: "", image: "" },
+            { name: "Dhiren Akkina", email: "", image: "" }
         ],
         "Social": [
-            { name: "Siya Patel", email: "siya@example.com", image: "orange.jpg" },
-            { name: "Anish Abburi", email: "anish@example.com", image: "papaya.jpg" },
-            { name: "Emily Alam", email: "emily@example.com", image: "quince.jpg" }
+            { name: "Siya Patel", email: "", image: "" },
+            { name: "Anish Abburi", email: "", image: "" },
+            { name: "Emily Alam", email: "", image: "" }
         ],
         "Logistics": [
-            { name: "Arya Kamath", email: "arya@example.com", image: "raspberry.jpg" },
-            { name: "Anish Patel", email: "anishp@example.com", image: "strawberry.jpg" },
-            { name: "Tuhina Dash", email: "tuhina@example.com", image: "tangerine.jpg" }
+            { name: "Arya Kamath", email: "", image: "" },
+            { name: "Anish Patel", email: "", image: "" },
+            { name: "Tuhina Dash", email: "", image: "" }
         ],
         "Tech": [
-            { name: "Pranav Mucharla", email: "pranav@example.com", image: "ugli.jpg" },
-            { name: "Aditya Mehta", email: "aditya@example.com", image: "vanilla.jpg" },
-            { name: "Sahasra Kakani", email: "sahasra@example.com", image: "watermelon.jpg" }
+            { name: "Pranav Mucharla", email: "", image: "" },
+            { name: "Aditya Mehta", email: "", image: "" },
+            { name: "Sahasra Kakani", email: "", image: "" }
         ],
         "Graphic Design": [
-            { name: "Arushi Rathod", email: "arushi@example.com", image: "xigua.jpg" },
-            { name: "Adharshana Narayanan", email: "adharshana@example.com", image: "yam.jpg" }
+            { name: "Arushi Rathod", email: "", image: "" },
+            { name: "Adharshana Narayanan", email: "", image: "" }
         ]
     };
 
@@ -79,8 +79,8 @@ export default function Home() {
                     <h2 className="text-3xl text-superiority-500">{team}</h2>
                     <ul className="text-xl pt-2 flex flex-row flex-wrap gap-6 justify-center">
                         {(members as BoardMember[]).map(member => (
-                            <li key={member.name} className="flex flex-col items-center">
-                                {member.name}
+                            <li key={member.name} className="flex flex-col items-center text-2xl">
+                                {member.name} {member.email != "" ? "|" : ""} {member.email}
                             </li>
                         ))}
                     </ul>
