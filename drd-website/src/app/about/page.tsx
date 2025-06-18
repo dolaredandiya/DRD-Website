@@ -3,16 +3,17 @@ export default function Home() {
             {
                 header: "What is Dola Re Dandiya?",
                 headerClass: "text-5xl text-harvest-500 pt-8",
-                paragraph: `Founded in 2017, Dola Re Dandiya is UNC-Chapel Hill’s premier intercollegiate dance competition dedicated to showcasing the traditional Indian dance forms of Raas and Garba. Each year, top collegiate teams from across the country travel to compete against one another, making Dola Re Dandiya a leading platform for cultural expression and entertainment.`
+                paragraph: `&emsp;Founded in 2017, Dola Re Dandiya is UNC-Chapel Hill's premier intercollegiate dance competition dedicated to showcasing the traditional Indian dance forms of Raas and Garba. Each year, top collegiate teams from across the country travel to compete against one another, making Dola Re Dandiya a leading platform for cultural expression and entertainment.`
             },
             {
                 header: "Mission, Vision, and UNC-DRD Values",
-                paragraph: `The vision of Dola Re Dandiya is to collaborate with other universities in order to increase the awareness of these dance forms throughout the nation and to create a unified presence of Indian folk dances.
-        <br /><br />This organization has been formed to actively entertain the general public and raise cultural awareness of the traditional North Indian dances, raas and garba; our objective is to hold an intercollegiate competition for other dance teams to compete and showcase their performances.`
+                paragraph: `&emsp;The vision of Dola Re Dandiya is to collaborate with other universities in order to increase the awareness of these dance forms throughout the nation and to create a unified presence of Indian folk dances.
+        <br /><br />&emsp;This organization has been formed to actively entertain the general public and raise cultural awareness of the traditional North Indian dances, raas and garba; our objective is to hold an intercollegiate competition for other dance teams to compete and showcase their performances.`
             },
             {
                 header: "DRD 2024-25 Comp Season",
-                paragraph: "Images from DRD Comp go here"
+                headerClass: "text-4xl text-harvest-500 pt-14",
+                paragraph: "&emsp;Images from DRD Comp go here"
             }
         ];
     
@@ -64,27 +65,30 @@ export default function Home() {
     };
 
     return (
-        <div className="px-40 text-center text-moss-500 pb-10">
+        <div className="px-4 sm:px-8 md:px-20 lg:px-40 text-center text-moss-500 pb-10">
             {sections.map((section, idx) => (
-                <div key={idx}>
-                    <h1 className={section.headerClass || "text-4xl text-harvest-500 pt-8"}>{section.header}</h1>
-                    <p className="text-3xl pt-5" dangerouslySetInnerHTML={{ __html: section.paragraph }} />
-                </div>
+            <div key={idx}>
+                <h1 className={section.headerClass || "text-4xl text-harvest-500 pt-8"}>{section.header}</h1>
+                <p
+                    className="text-3xl pt-5 text-left"
+                    dangerouslySetInnerHTML={{ __html: section.paragraph }}
+                />
+            </div>
             ))}
-            <h1 className="text-4xl text-harvest-500 pt-8">
-                Meet the Board!
+            <h1 className="text-4xl text-harvest-500 pt-14">
+            Meet the Board!
             </h1>
             {Object.entries(boardTeam).map(([team, members]) => (
-                <div key={team} className="pt-8">
-                    <h2 className="text-3xl text-superiority-500">{team}</h2>
-                    <ul className="text-xl pt-2 flex flex-row flex-wrap gap-6 justify-center">
-                        {(members as BoardMember[]).map(member => (
-                            <li key={member.name} className="flex flex-col items-center text-2xl">
-                                {member.name} {member.email != "" ? "|" : ""} {member.email}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <div key={team} className="pt-8">
+                <h2 className="text-3xl text-superiority-500">{team}</h2>
+                <ul className="text-xl pt-2 flex flex-row flex-wrap gap-6 justify-center">
+                {(members as BoardMember[]).map(member => (
+                    <li key={member.name} className="flex flex-col items-center text-2xl">
+                    {member.name} {member.email != "" ? "|" : ""} {member.email}
+                    </li>
+                ))}
+                </ul>
+            </div>
             ))}
         </div>
     );
