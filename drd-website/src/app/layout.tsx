@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Forum, Neuton } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 const neuton = Neuton({
   variable: "--font-neuton",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <Navbar></Navbar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
