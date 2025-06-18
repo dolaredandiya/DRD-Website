@@ -32,9 +32,9 @@ export default function RootLayout({
     <html lang="en" className={`${forum.variable} ${neuton.variable}`}> 
       <body
       >
-        <Navbar></Navbar>
+        <Navbar />
         {children}
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );
