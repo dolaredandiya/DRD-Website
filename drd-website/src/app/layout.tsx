@@ -30,10 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${forum.variable} ${neuton.variable}`}> 
-      <body
+      <body className="flex flex-col min-h-screen"
       >
         <Navbar />
-        {children}
+        <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
       </body>
     </html>

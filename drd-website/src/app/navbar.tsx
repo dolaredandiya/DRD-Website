@@ -2,10 +2,26 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
+    const [aboutOpen, setAboutOpen] = React.useState(false);
+    const dropdownRef = useRef<HTMLLIElement>(null);
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if(dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setAboutOpen(false);
+      }
+    }
+
+    useEffect(() => {
+      document.addEventListener('mousedown', handleClickOutside);
+
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, []);
 
     return (
       <nav className="bg-prussian-500 p-4">
@@ -33,8 +49,49 @@ export default function Navbar() {
             <li>
               <Link href="/" className="text-white hover:text-blue-200 font-semibold">Home</Link>
             </li>
-            <li>
-              <Link href="/about" className="text-white hover:text-blue-200 font-semibold">About</Link>
+            <li className="relative" ref={dropdownRef}>
+              <div className="flex items-center">
+              <Link
+                href="/about"
+                className="text-white hover:text-blue-200 font-semibold"
+              >
+                About
+              </Link>
+              <button
+                type="button"
+                className="ml-1 text-white focus:outline-none"
+                aria-label="Toggle About dropdown"
+                onClick={(e) => {
+                e.stopPropagation();
+                setAboutOpen((prev) => !prev);
+                }}
+              >
+                <svg
+                className={`w-4 h-4 transition-transform ${aboutOpen ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              </div>
+              {aboutOpen && (
+              <div className="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg z-20 divide-y divide-gray-300">
+                  <Link
+                  href="/about/past-events"
+                  className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+                  >
+                  Past Events
+                  </Link>
+                  <Link
+                  href="/about/meet-the-board"
+                  className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+                  >
+                  Meet the Board
+                  </Link>
+              </div>
+              )}
             </li>
             <li>
               <Link href="/current-sponsors" className="text-white hover:text-blue-200 font-semibold">Current Sponsors</Link>
