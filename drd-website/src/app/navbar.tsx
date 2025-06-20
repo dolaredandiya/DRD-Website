@@ -81,12 +81,20 @@ export default function Navbar() {
                   <Link
                   href="/about/past-events"
                   className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+                  onClick={e => {
+                    e.stopPropagation();
+                    setAboutOpen((prev) => !prev);
+                  }}
                   >
                   Past Events
                   </Link>
                   <Link
                   href="/about/meet-the-board"
                   className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+                  onClick={e => {
+                    e.stopPropagation();
+                    setAboutOpen((prev) => !prev);
+                  }}
                   >
                   Meet the Board
                   </Link>
@@ -109,8 +117,57 @@ export default function Navbar() {
             <li>
               <Link href="/" className="text-white hover:text-blue-200 font-semibold" onClick={() => setIsOpen(false)}>Home</Link>
             </li>
-            <li>
-              <Link href="/about" className="text-white hover:text-blue-200 font-semibold" onClick={() => setIsOpen(false)}>About</Link>
+            <li className="relative" ref={dropdownRef}>
+              <div className="flex items-center">
+              <Link
+                href="/about"
+                className="text-white hover:text-blue-200 font-semibold"
+              >
+                About
+              </Link>
+              <button
+                type="button"
+                className="ml-1 text-white focus:outline-none"
+                aria-label="Toggle About dropdown"
+                onClick={(e) => {
+                e.stopPropagation();
+                setAboutOpen((prev) => !prev);
+                }}
+              >
+                <svg
+                className={`w-4 h-4 transition-transform ${aboutOpen ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              </div>
+              {aboutOpen && (
+              <div className="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg z-20 divide-y divide-gray-300">
+                  <Link
+                  href="/about/past-events"
+                  className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+                  onClick={e => {
+                    e.stopPropagation();
+                    setAboutOpen((prev) => !prev);
+                  }}
+                  >
+                  Past Events
+                  </Link>
+                  <Link
+                  href="/about/meet-the-board"
+                  className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+                  onClick={e => {
+                    e.stopPropagation();
+                    setAboutOpen((prev) => !prev);
+                  }}
+                  >
+                  Meet the Board
+                  </Link>
+              </div>
+              )}
             </li>
             <li>
               <Link href="/current-sponsors" className="text-white hover:text-blue-200 font-semibold" onClick={() => setIsOpen(false)}>Current Sponsors</Link>
