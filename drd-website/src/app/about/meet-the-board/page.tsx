@@ -7,7 +7,7 @@ export default function Home() {
     const boardTeam: Record<string, BoardMember[]> = {
         "Directors": [
             { name: "Smruti Ganta", email: "sganta@unc.edu", image: "" },
-            { name: "Sanjitha Srinath", email: "sanjita@unc.edu", image: "" },
+            { name: "Sanjita Srinath", email: "sanjita@unc.edu", image: "" },
             { name: "Raj Yogarajan", email: "ryogaraj@unc.edu", image: "" }
         ],
         "Marketing": [
@@ -42,7 +42,7 @@ export default function Home() {
         ],
         "Graphic Design": [
             { name: "Arushi Rathod", email: "", image: "" },
-            { name: "Adharshana Narayanan", email: "", image: "" }
+            { name: "Adarshana Narayanan", email: "", image: "" }
         ]
     };
     return (
