@@ -5,7 +5,7 @@ export default function Footer() {
                     { src: "/socials/insta.png", alt: "Instagram Logo", href: "https://www.instagram.com/uncdrd/" },
                     { src: "/socials/facebook.png", alt: "Facebook Logo", href: "https://www.facebook.com/DolaReDandiya" },
                     { src: "/socials/tiktok.png", alt: "Tiktok Logo", href: "https://www.tiktok.com/@dolaredandiya" },
-                    { src: "/socials/youtube.png", alt: "YouTube Logo", href: "https://www.youtube.com/playlist?app=desktop&list=PLQwRtHjfTgb2jZnq9-qRpawKJuzywCWpo" },
+                    { src: "/socials/youtube.png", alt: "YouTube Logo", href: "https://www.youtube.com/@dolaredandiya97" },
                 ];
     return (
     <footer className="bg-prussian-500 h-24 w-full">
