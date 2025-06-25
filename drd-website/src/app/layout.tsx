@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Forum, Neuton } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 const neuton = Neuton({
   variable: "--font-neuton",
@@ -29,10 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${forum.variable} ${neuton.variable}`}> 
-      <body
+      <body className="flex flex-col min-h-screen"
       >
-        <Navbar></Navbar>
-        {children}
+        <Navbar />
+        <main className="flex-grow flex flex-col">{children}</main>
+        <Footer />
       </body>
     </html>
   );
