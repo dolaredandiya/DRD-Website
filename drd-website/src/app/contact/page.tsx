@@ -1,6 +1,5 @@
 "use client";
 
-import ComingSoon from "../comingSoon";
 import { useState } from "react";
 
 export default function Home() {
