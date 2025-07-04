@@ -81,28 +81,34 @@ export default function Navbar() {
             </div>
           </li>
 
-          <li>
-            <Link
-              href="/current-sponsors"
-              className="text-white hover:text-blue-200 font-semibold"
-            >
-              Current Sponsors
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href="/potential-sponsors"
-              className="text-white hover:text-blue-200 font-semibold"
-            >
-              Potential Sponsors
-            </Link>
+          <li className="relative group">
+            <div className="flex items-center cursor-pointer text-white font-semibold">
+              <div
+                className="text-white hover:text-blue-200 font-semibold"
+              >
+                Sponsors
+              </div>
+            </div>
+            <div className="absolute left-0 mt-2 w-48 bg-white rounded shadow-lg z-20 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 divide-y divide-gray-300">
+              <Link
+                href="/past-sponsors"
+                className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+              >
+                Past Sponsors
+              </Link>
+              <Link
+                href="/potential-sponsors"
+                className="block px-4 py-2 text-prussian-700 hover:bg-prussian-100"
+              >
+                Potential Sponsors
+              </Link>
+            </div>
           </li>
 
           <li>
             <Link
               href="/contact"
-              className="text-white hover:text-blue-200 font-semibold pr-4"
+              className="text-white hover:text-blue-200 font-semibold pr-6"
             >
               Contact Us
             </Link>
