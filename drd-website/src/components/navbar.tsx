@@ -187,11 +187,11 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/current-sponsors"
+              href="/past-sponsors"
               className="text-white hover:text-blue-200 font-semibold"
               onClick={() => setIsOpen(false)}
             >
-              Current Sponsors
+              Past Sponsors
             </Link>
           </li>
           <li>
