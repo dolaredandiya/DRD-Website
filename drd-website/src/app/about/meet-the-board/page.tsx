@@ -11,38 +11,38 @@ export default function Home() {
             { name: "Raj Yogarajan", email: "ryogaraj@unc.edu", image: "" }
         ],
         "Marketing": [
-            { name: "Diya Parikh", email: "", image: "" },
-            { name: "Khushil Shah", email: "", image: "" },
-            { name: "Aadhi Jayaram", email: "", image: "" },
-            { name: "Khyati Srivastava", email: "", image: "" }
+            { name: "Diya Parikh", email: "dparikh@unc.edu", image: "" },
+            { name: "Khushil Shah", email: "khushil@unc.edu", image: "" },
+            { name: "Aadhi Jayaram", email: "aadhidev@unc.edu", image: "" },
+            { name: "Khyati Srivastava", email: "khyatish@unc.edu", image: "" }
         ],
         "Finance": [
-            { name: "Keya Mahajan", email: "", image: "" },
-            { name: "Sithija Ganhewage", email: "", image: "" }
+            { name: "Keya Mahajan", email: "keyam@unc.edu", image: "" },
+            { name: "Sithija Ganhewage", email: "ganhew@unc.edu", image: "" }
         ],
         "Sponsorship": [
-            { name: "Moksha Nemalipuri", email: "", image: "" },
-            { name: "Aarav Gupta", email: "", image: "" },
-            { name: "Dhiren Akkina", email: "", image: "" }
+            { name: "Moksha Nemalipuri", email: "moksha@unc.edu", image: "" },
+            { name: "Aarav Gupta", email: "aaravgup@unc.edu", image: "" },
+            { name: "Dhiren Akkina", email: "akkindhi@unc.edu", image: "" }
         ],
         "Social": [
             { name: "Siya Patel", email: "", image: "" },
-            { name: "Anish Abburi", email: "", image: "" },
-            { name: "Emily Alam", email: "", image: "" }
+            { name: "Anish Abburi", email: "aabburi@unc.edu", image: "" },
+            { name: "Emily Alam", email: "emilyal@unc.edu", image: "" }
         ],
         "Logistics": [
-            { name: "Arya Kamath", email: "", image: "" },
-            { name: "Anish Patel", email: "", image: "" },
-            { name: "Tuhina Dash", email: "", image: "" }
+            { name: "Arya Kamath", email: "akkamath@unc.edu", image: "" },
+            { name: "Anish Patel", email: "anish13@unc.edu", image: "" },
+            { name: "Tuhina Dash", email: "tuhinad@unc.edu", image: "" }
         ],
         "Tech": [
-            { name: "Pranav Mucharla", email: "", image: "" },
-            { name: "Aditya Mehta", email: "", image: "" },
-            { name: "Sahasra Kakani", email: "", image: "" }
+            { name: "Pranav Mucharla", email: "pmucharl@unc.edu", image: "" },
+            { name: "Aditya Mehta", email: "adityam@unc.edu", image: "" },
+            { name: "Sahasra Kakani", email: "sahasrak@unc.edu", image: "" }
         ],
         "Graphic Design": [
-            { name: "Arushi Rathod", email: "", image: "" },
-            { name: "Adarshana Narayanan", email: "", image: "" }
+            { name: "Arushi Rathod", email: "rarushi@unc.edu", image: "" },
+            { name: "Adarshana Narayanan", email: "adarln@unc.edu", image: "" }
         ]
     };
     return (
