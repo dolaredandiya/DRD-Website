@@ -26,7 +26,7 @@ export default function Home() {
             { name: "Dhiren Akkina", email: "akkindhi@unc.edu", image: "" }
         ],
         "Social": [
-            { name: "Siya Patel", email: "", image: "" },
+            { name: "Siya Patel", email: "siyap7@unc.edu", image: "" },
             { name: "Anish Abburi", email: "aabburi@unc.edu", image: "" },
             { name: "Emily Alam", email: "emilyal@unc.edu", image: "" }
         ],
